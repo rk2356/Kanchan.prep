@@ -190,7 +190,7 @@ Follow this schema EXACTLY. You MUST provide detailed text for the "explanation"
   };
 
   return (
-    <div className="flex-1 flex flex-col h-full w-full bg-[#0e1621] text-[#e1e3e6] z-50">
+    <div className="flex-1 flex flex-col h-[100dvh] md:h-full w-full bg-[#0e1621] text-[#e1e3e6] z-50">
       
       {/* Home Screen */}
       {screen === 'home' && (
@@ -297,7 +297,7 @@ Follow this schema EXACTLY. You MUST provide detailed text for the "explanation"
             </div>
 
             {/* Footer */}
-            <div className="shrink-0 p-4 bg-[#0e1621] border-t border-[#1f2f3d] shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
+            <div className="shrink-0 pt-4 px-4 pb-6 md:pb-4 bg-[#0e1621] border-t border-[#1f2f3d] shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
                 <div className="max-w-4xl mx-auto w-full">
                     <button 
                         onClick={handleNext}

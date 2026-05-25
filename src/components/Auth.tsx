@@ -81,7 +81,7 @@ export default function Auth({ onAuthSuccess }: AuthProps) {
   };
 
   return (
-    <div className="relative z-10 min-h-screen flex items-center justify-center p-4">
+    <div className="relative z-10 min-h-[100dvh] flex items-center justify-center p-4">
       <div className="w-full max-w-[360px]">
         <div className="glass bg-white/[0.03] border border-white/10 rounded-[2.5rem] p-8 md:p-10 purple-glow">
           <div className="text-center mb-8">

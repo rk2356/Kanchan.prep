@@ -214,9 +214,9 @@ ${fileContext || 'No files uploaded yet.'}
 
   if (viewMode === 'mock') {
     return (
-      <div className="flex h-screen w-full bg-[#050208]">
+      <div className="flex h-[100dvh] w-full bg-[#050208]">
         {/* We can optionally keep the sidebar visible on desktop, or just replace entire view. The user wanted to "add this UI to it", so let's keep the desktop sidebar */}
-        <aside className="hidden md:flex w-[300px] shrink-0 glass bg-black/40 border-r border-white/10 flex-col h-screen">
+        <aside className="hidden md:flex w-[300px] shrink-0 glass bg-black/40 border-r border-white/10 flex-col h-full">
             <div className="p-5 border-b border-white/5">
                 <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-violet-600 to-fuchsia-600 flex items-center justify-center">
@@ -246,10 +246,10 @@ ${fileContext || 'No files uploaded yet.'}
   }
 
   return (
-    <div className="h-screen flex bg-[#050208] text-white overflow-hidden relative z-10">
+    <div className="h-[100dvh] flex bg-[#050208] text-white overflow-hidden relative z-10 w-full">
       
       {/* Desktop Sidebar */}
-      <aside className="hidden md:flex w-[300px] shrink-0 glass bg-black/40 border-r border-white/10 flex-col h-screen relative z-30">
+      <aside className="hidden md:flex w-[300px] shrink-0 glass bg-black/40 border-r border-white/10 flex-col h-full relative z-30">
         <div className="p-5 border-b border-white/5">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-violet-600 to-fuchsia-600 flex items-center justify-center">
@@ -322,7 +322,7 @@ ${fileContext || 'No files uploaded yet.'}
       </aside>
 
       {/* Main Chat Area */}
-      <main className="flex-1 flex flex-col h-screen relative z-20">
+      <main className="flex-1 flex flex-col h-full relative z-20 min-w-0">
         {/* Mobile Header */}
         <div className="md:hidden flex items-center justify-between p-4 border-b border-white/10 glass bg-black/30">
           <button onClick={() => setIsMobileMenuOpen(true)} className="p-2 text-white/70">
@@ -383,7 +383,7 @@ ${fileContext || 'No files uploaded yet.'}
         </div>
 
         {/* Action Panel */}
-        <div className="px-4 pb-4 max-w-3xl mx-auto w-full bg-[#050208]/80 backdrop-blur-md pt-2">
+        <div className="shrink-0 px-4 pb-6 md:pb-8 pt-2 max-w-3xl mx-auto w-full bg-[#050208]/80 backdrop-blur-md z-30">
           {messages.length === 0 && (
             <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide">
               <button 
